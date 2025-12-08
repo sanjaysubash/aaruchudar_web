@@ -76,6 +76,59 @@ export default function AboutPage() {
               <Link href="/hi-events" className="px-4 py-2 rounded-md border border-white/10 text-gray-200 hover:bg-white/10 transition">Explore Events</Link>
             </div>
           </section>
+
+          {/* Organization Structure */}
+          <section className="rounded-2xl p-8 backdrop-blur-md bg-white/5 border border-white/10">
+            <h2 className="text-2xl font-semibold text-white mb-3">Organization Structure</h2>
+            <p className="text-gray-300 mb-4">Our structure enables clarity, responsibility, and fast execution.</p>
+            <div className="grid md:grid-cols-2 gap-6 text-gray-300">
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold text-white">Leadership</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> Founder & CEO — Vision, strategy, partnerships</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> COO — Operations, processes, compliance</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> CTO — Platforms, engineering, data</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold text-white">Programs</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> HI Labs — Research, mentorship, project delivery</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> HI Courses — Curriculum, cohorts, certification</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> HI Workshops — Facilitation, content, outcomes</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> Events — Community, speakers, partnerships</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold text-white">Enablement</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> Product & Design — Experience and platform UX</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> Marketing & Growth — Brand, content, outreach</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> Partnerships — Institutions and industry ties</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold text-white">Operations</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> Finance & Legal — Governance and compliance</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> Community Success — Support and outcomes</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-purple-400" aria-hidden /> Admin — Scheduling and coordination</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Social Media */}
+          <section className="rounded-2xl p-8 backdrop-blur-md bg-white/5 border border-white/10">
+            <h2 className="text-2xl font-semibold text-white mb-3">Connect With Us</h2>
+            <p className="text-gray-300 mb-4">Follow our updates, events, and insights.</p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="https://twitter.com/aaruchudar" target="_blank" className="px-4 py-2 rounded-md border border-white/10 text-gray-200 hover:bg-white/10 transition">Twitter / X</Link>
+              <Link href="https://www.instagram.com/aaruchudar" target="_blank" className="px-4 py-2 rounded-md border border-white/10 text-gray-200 hover:bg-white/10 transition">Instagram</Link>
+              <Link href="https://www.linkedin.com/company/aaruchudar" target="_blank" className="px-4 py-2 rounded-md border border-white/10 text-gray-200 hover:bg-white/10 transition">LinkedIn</Link>
+              <Link href="https://www.youtube.com/@aaruchudar" target="_blank" className="px-4 py-2 rounded-md border border-white/10 text-gray-200 hover:bg-white/10 transition">YouTube</Link>
+            </div>
+          </section>
         </div>
       </main>
     </div>
