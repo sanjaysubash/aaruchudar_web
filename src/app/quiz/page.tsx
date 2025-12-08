@@ -102,7 +102,11 @@ function QuizPage(): JSX.Element {
   const loadQuiz = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/quiz-questions.json");
+      const controller = new AbortController();
+      const t = setTimeout(() => controller.abort(), 10000); // 10s timeout for mobile
+      const res = await fetch("/quiz-questions.json", { signal: controller.signal, cache: "no-store" });
+      clearTimeout(t);
+      if (!res.ok) throw new Error(`Failed to load quiz (${res.status})`);
       const data: any = await res.json();
 
       if (data?.quiz?.questions && Array.isArray(data.quiz.questions)) {
@@ -186,7 +190,11 @@ function QuizPage(): JSX.Element {
   const restart = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/quiz-questions.json");
+      const controller = new AbortController();
+      const t = setTimeout(() => controller.abort(), 10000);
+      const res = await fetch("/quiz-questions.json", { signal: controller.signal, cache: "no-store" });
+      clearTimeout(t);
+      if (!res.ok) throw new Error(`Failed to load quiz (${res.status})`);
       const data: any = await res.json();
 
       if (data?.quiz?.questions && Array.isArray(data.quiz.questions)) {
@@ -211,6 +219,7 @@ function QuizPage(): JSX.Element {
       setLifelines({ fifty: 1, skip: 1 });
     } catch (err) {
       console.error("Error restarting quiz:", err);
+      setQuizData(null);
     } finally {
       setLoading(false);
     }
