@@ -50,13 +50,13 @@ const ProgramCard = ({ data }: { data: any }) => (
 
       <div className="mt-auto flex gap-4 pt-4 border-t border-white/40">
         <Link
-          href="#"
+          href={data.href}
           className="text-purple-600 font-semibold hover:underline text-sm"
         >
           Explore
         </Link>
         <Link
-          href="#"
+          href={data.learnMoreHref ?? data.href}
           className="text-purple-600 font-semibold hover:underline text-sm"
         >
           Learn More
@@ -81,6 +81,7 @@ const programCards = [
       "Collaborative research",
       "Leadership workshops",
     ],
+    href: "/hi-labs",
   },
   {
     id: 2,
@@ -95,6 +96,7 @@ const programCards = [
       "Career guidance",
       "Skill certification",
     ],
+    href: "/hi-courses",
   },
   {
     id: 3,
@@ -109,6 +111,8 @@ const programCards = [
       "Real-world scenarios",
       "Expert facilitators",
     ],
+    href: "/hi-workshops",
+    learnMoreHref: "/hi-workshops/psychological",
   },
   {
     id: 4,
@@ -123,6 +127,7 @@ const programCards = [
       "Panel discussions",
       "Interactive activities",
     ],
+    href: "/hi-events",
   },
 ];
 
