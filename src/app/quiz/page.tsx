@@ -2,6 +2,7 @@
 
 import React, { JSX, useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Testimonials from "@/components/Testimonials";
 
 // lightweight click sound
 const ding = typeof window !== "undefined" ? new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQgAAAA=") : null;
@@ -638,6 +639,15 @@ function QuizPage(): JSX.Element {
           </AnimatePresence>
         </>
       )}
+
+      {/* Success Stories section below the quiz */}
+      <section className="mt-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-2xl font-bold text-slate-800 mb-4">Success Stories</h2>
+          <p className="text-slate-600 mb-6">Real achievements from our learners who completed Aaruchudar programs and quizzes.</p>
+          <Testimonials />
+        </div>
+      </section>
     </div>
   );
 }

@@ -182,19 +182,19 @@ export default function Hero() {
 
           <div className="features-grid-modern" aria-hidden>
             <div className="feature-item">
-              <div className="feature-icon" aria-hidden>🧠</div>
+              <div className="feature-icon" aria-hidden></div>
               <div className="feature-title">Mental Clarity</div>
             </div>
             <div className="feature-item">
-              <div className="feature-icon" aria-hidden>⚡</div>
+              <div className="feature-icon" aria-hidden></div>
               <div className="feature-title">Rapid Progress</div>
             </div>
             <div className="feature-item">
-              <div className="feature-icon" aria-hidden>🎯</div>
+              <div className="feature-icon" aria-hidden></div>
               <div className="feature-title">Personalized Plans</div>
             </div>
             <div className="feature-item">
-              <div className="feature-icon" aria-hidden>🧪</div>
+              <div className="feature-icon" aria-hidden></div>
               <div className="feature-title">Science-Backed</div>
             </div>
           </div>
