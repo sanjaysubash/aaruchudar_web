@@ -1,14 +1,35 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+
+type User = {
+  userId: string;
+  email: string;
+};
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState<boolean>(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
+  // Theme init
   useEffect(() => {
-    // Initialize based on current class
     if (typeof document !== "undefined") {
       const hasDark = document.documentElement.classList.contains("dark");
       setIsDark(hasDark);
     }
+  }, []);
+
+  // Auth check
+  useEffect(() => {
+    fetch("/api/auth/me")
+      .then((res) => res.json())
+      .then((data) => {
+        setUser(data.user);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
   }, []);
 
   const toggleTheme = () => {
@@ -16,16 +37,50 @@ export default function Navbar() {
       document.documentElement.classList.toggle("dark");
       const nowDark = document.documentElement.classList.contains("dark");
       setIsDark(nowDark);
-      // Persist preference
       try {
         localStorage.setItem("theme", nowDark ? "dark" : "light");
       } catch {}
     }
   };
 
+  if (loading) return null; // avoid flicker
+
   return (
-    <nav>
+    <nav className="flex items-center justify-between">
+      {/* LEFT */}
+      <div className="flex items-center gap-4">
+        <Link href="/" className="text-sm font-medium">
+          Home
+        </Link>
+
+        {user && (
+          <Link href="/dashboard" className="text-sm font-medium">
+            Dashboard
+          </Link>
+        )}
+      </div>
+
+      {/* RIGHT */}
       <div className="ml-auto flex items-center gap-3">
+        {user ? (
+          <button
+            onClick={async () => {
+              await fetch("/api/auth/logout", { method: "POST" });
+              window.location.href = "/login";
+            }}
+            className="text-sm font-medium text-red-500 hover:underline"
+          >
+            Logout
+          </button>
+        ) : (
+          <Link
+            href="/login"
+            className="text-sm font-medium text-blue-500 hover:underline"
+          >
+            Login
+          </Link>
+        )}
+
         <button
           onClick={toggleTheme}
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
