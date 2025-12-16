@@ -16,7 +16,7 @@ export default function RootLayout({
   const isQuizPage = pathname === "/quiz";
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
       </head>

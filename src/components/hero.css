@@ -83,7 +83,9 @@
   .noise-layer {
     position: absolute;
     inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    /* Replace light texture with dark-friendly subtle noise */
+    /* previous: background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"); */
+    background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
     opacity: 0.04;
     pointer-events: none;
   }

@@ -202,7 +202,7 @@ export default function BlogPage() {
                       </div>
                     </div>
                     <button className="btn-primary">
-                      Read More <ArrowRight className="w-5 h-5" />
+                      Read More <ArrowRight className="w-5 h-5 text-yellow-400" />
                     </button>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ export default function BlogPage() {
                         <div className="avatar-small">{post.author[0]}</div>
                         <span>{post.author}</span>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-purple-400" />
+                      <ArrowRight className="w-5 h-5 text-yellow-400" />
                     </div>
                   </div>
                 </motion.article>

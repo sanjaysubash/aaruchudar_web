@@ -108,15 +108,15 @@ export default function Landing() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-cyan-50 to-blue-50 text-slate-900">
         <div className="mx-auto max-w-3xl px-6 text-center">
 
-          <div className="rounded-2xl bg-white/10 backdrop-blur-xl p-12 shadow-2xl border border-white/20">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl p-12 shadow-2xl border border-slate-200">
             <h2 className="text-3xl font-extrabold sm:text-4xl">
               Start Your Cognitive Upgrade
             </h2>
 
-            <p className="mt-4 text-slate-200 leading-relaxed">
+            <p className="mt-4 text-slate-700 leading-relaxed">
               Take a complimentary baseline assessment and receive 
               a personalized roadmap built to accelerate your growth.
             </p>
@@ -124,16 +124,16 @@ export default function Landing() {
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/quiz"
-                className="bg-white text-slate-900 px-7 py-3 rounded-xl font-semibold shadow-lg 
-                           hover:bg-slate-100 transition-all"
+                className="bg-cyan-600 text-white px-7 py-3 rounded-xl font-semibold shadow-lg 
+                           hover:bg-cyan-500 active:scale-[0.98] transition-all"
               >
                 Take Assessment
               </Link>
 
               <Link
                 href="/blog"
-                className="bg-white/20 border border-white/30 backdrop-blur px-7 py-3 rounded-xl font-semibold 
-                           hover:bg-white/25 transition-all"
+                className="bg-white/80 border border-slate-200 px-7 py-3 rounded-xl font-semibold text-slate-900 
+                           hover:bg-white transition-all"
               >
                 Explore Insights
               </Link>
