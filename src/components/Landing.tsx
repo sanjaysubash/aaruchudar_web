@@ -27,10 +27,10 @@ const features = [
 ];
 
 const stats = [
-  { value: "9", label: "Intelligence Labs" },
-  { value: "100+", label: "Active Learners" },
+  { value: "8", label: "Intelligence Labs" },
+  { value: "1 - 100", label: "Active Learners" },
   { value: "50+", label: "Workshops" },
-  { value: "98%", label: "Positive Feedback" },
+  { value: "93%", label: "Positive Feedback" },
 ];
 
 // ======================= COMPONENT =======================
