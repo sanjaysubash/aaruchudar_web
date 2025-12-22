@@ -343,35 +343,6 @@ const HIEventsPage = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Newsletter Section */}
-      <div className={styles.newsletter}>
-        <div className={styles.newsletterContent}>
-          <h2 className={styles.newsletterTitle}>Never Miss a Moment of Growth</h2>
-          <p className={styles.newsletterDescription}>
-            Subscribe to get updates about upcoming events and exclusive content
-          </p>
-          
-          <form onSubmit={handleSubscribe} className={styles.newsletterForm}>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              className={styles.newsletterInput}
-              required
-            />
-            <motion.button
-              type="submit"
-              className="px-6 py-3 bg-white text-purple-600 rounded-xl font-semibold hover:bg-purple-50 transition-colors"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              {isSubscribed ? 'Subscribed! ✓' : 'Subscribe Now'}
-            </motion.button>
-          </form>
-        </div>
-      </div>
     </div>
   );
 };
