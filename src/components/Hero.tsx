@@ -179,7 +179,7 @@ export default function Hero() {
             <Link href="/productpage" className="btn-secondary-modern" aria-label="View product details">Explore Platform</Link>
           </div>
 
-          <div className="features-grid-modern" aria-hidden>
+          {/* <div className="features-grid-modern" aria-hidden>
             <div className="feature-item">
               <div className="feature-icon" aria-hidden></div>
               <div className="feature-title">Inner Clarity</div>
@@ -196,9 +196,9 @@ export default function Hero() {
               <div className="feature-icon" aria-hidden></div>
               <div className="feature-title">Research-Driven Methods</div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="trust-indicators" aria-hidden>
+          <div className="trust-indicators"  aria-hidden>
             <div>● Daily Cognitive Workouts</div>
             <div>● Mentor-Led Learning Paths</div>
             <div>● Free Intelligence Benchmark Test</div>
