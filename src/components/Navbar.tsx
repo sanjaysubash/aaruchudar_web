@@ -87,22 +87,22 @@ function Navbar() {
 
 			{/* Mobile Top Bar */}
 			<div className={`md:hidden fixed top-0 left-0 right-0 z-[998] transition-transform ${show ? 'translate-y-0' : '-translate-y-full'}`}>
-				<div className="flex items-center justify-between px-4 py-3 backdrop-blur-lg bg-amber-900/40 rounded-b-full">
+				<div className="flex items-center justify-between  px-8 py-3 backdrop-blur-lg bg-amber-900/40 rounded-b-full">
 					<Link href="/" className="flex items-center gap-2 no-underline" aria-label="Home">
 						<Image src="/logo2.png" alt="Logo" width={32} height={32} className="rounded-lg" />
 						<span className="text-base font-semibold text-white">Aaruchudar</span>
 					</Link>
 					<div className="flex items-center gap-2">
 						<Link href="/login" aria-label="Login" onClick={() => setActiveTab('login')} className={`text-sm font-medium no-underline ${activeTab === 'login' ? 'text-blue-400' : 'text-white/80 hover:text-white'}`}>Login</Link>
-						<button
+						{/* <button
 							aria-label="Toggle menu"
 							aria-expanded={mobileOpen}
 							onClick={() => setMobileOpen((o) => !o)}
 							className="p-2 rounded-md text-white/80 hover:bg-white/10 active:scale-95 transition"
 						>
 							{mobileOpen ? '✕' : '☰'}
-						</button>
-					</div>
+						</button>*/}
+					</div> 
 				</div>
 				{/* Mobile dropdown panel */}
 				<div
