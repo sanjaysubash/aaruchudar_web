@@ -88,7 +88,7 @@ const SolutionsSection = () => {
           </div>
           <div className={styles.solutionMedia}>
             <Image
-              src="/window.svg"
+              src="/images/neuro_tech_suite.jpg"
               alt="Neuro-Tech Suite"
               width={800}
               height={600}
@@ -107,7 +107,6 @@ const SolutionsSection = () => {
           </div>
           <div className={styles.solutionCTA}>
             <button className={styles.solutionBtnPrimary}>Explore Suite</button>
-            <button className={styles.solutionBtnGhost}>Learn More</button>
           </div>
         </div>
 
@@ -119,7 +118,7 @@ const SolutionsSection = () => {
           </div>
           <div className={styles.solutionMedia}>
             <Image
-              src="/file.svg"
+              src="/images/neurolens_and_band.jpg"
               alt="Neuro Band and Lens"
               width={800}
               height={600}
@@ -148,7 +147,6 @@ const SolutionsSection = () => {
             >
               View Devices
             </button>
-            <button className={styles.solutionBtnGhost}>Specs</button>
           </div>
         </div>
 
@@ -180,7 +178,6 @@ const SolutionsSection = () => {
           </div>
           <div className={styles.solutionCTA}>
             <button className={styles.solutionBtnPrimary}>Explore Labs</button>
-            <button className={styles.solutionBtnGhost}>Curriculum</button>
           </div>
         </div>
       </div>
@@ -230,181 +227,222 @@ const LabsGrid = () => (
   </section>
 );
 
-const ProgramFormats = () => (
-  <section id="programs" className={`${styles.container} ${styles.section}`}>
-    <h2 className={styles.sectionTitle}>Program Formats</h2>
-    <div className={styles.programGrid}>
-      {/* Workshops */}
-      <div className={styles.programCard}>
-        <div className={styles.programHeader}>
-          <span className={styles.programTitle}>Workshops</span>
-          <span className={styles.programBadge}>1–2 days</span>
-        </div>
-        <div className={styles.programBody}>
-          <p className={styles.programLine}>Intensive, hands-on HI modules.</p>
-          <div className={styles.programFeatures}>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Live facilitation
-            </div>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Practice + reflection
-            </div>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Baseline metrics
+const ProgramFormats = () => {
+  const router = useRouter();
+  const handleGetProposal = () => {
+    router.push("/contact");
+  };
+
+  return (
+    <section id="programs" className={`${styles.container} ${styles.section}`}>
+      <h2 className={styles.sectionTitle}>Program Formats</h2>
+      <div className={styles.programGrid}>
+        {/* Workshops */}
+        <div className={styles.programCard}>
+          <div className={styles.programHeader}>
+            <span className={styles.programTitle}>Workshops</span>
+            <span className={styles.programBadge}>1–2 days</span>
+          </div>
+          <div className={styles.programBody}>
+            <p className={styles.programLine}>
+              Intensive, hands-on HI modules.
+            </p>
+            <div className={styles.programFeatures}>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Live facilitation
+              </div>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Practice + reflection
+              </div>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Baseline metrics
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.programCTA}>
-          <button className={styles.programBtnPrimary}>Book Workshop</button>
-          <button className={styles.programBtnGhost}>Agenda</button>
-        </div>
-      </div>
-
-      {/* Cohort Programs */}
-      <div className={styles.programCard}>
-        <div className={styles.programHeader}>
-          <span className={styles.programTitle}>Cohort Programs</span>
-          <span className={styles.programBadge}>4–12 weeks</span>
-        </div>
-        <div className={styles.programBody}>
-          <p className={styles.programLine}>
-            Structured progression with weekly labs.
-          </p>
-          <div className={styles.programFeatures}>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Guided learning
-            </div>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Peer practice
-            </div>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Outcome tracking
-            </div>
+          <div className={styles.programCTA}>
+            <button
+              className={styles.programBtnPrimary}
+              onClick={handleGetProposal}
+            >
+              Book Workshop
+            </button>
+            <button className={styles.programBtnGhost}>Agenda</button>
           </div>
         </div>
-        <div className={styles.programCTA}>
-          <button className={styles.programBtnPrimary}>Join Cohort</button>
-          <button className={styles.programBtnGhost}>Syllabus</button>
-        </div>
-      </div>
 
-      {/* Annual Integrations */}
-      <div className={styles.programCard}>
-        <div className={styles.programHeader}>
-          <span className={styles.programTitle}>
-            Annual Institutional Integrations
-          </span>
-          <span className={styles.programBadge}>Year-round</span>
-        </div>
-        <div className={styles.programBody}>
-          <p className={styles.programLine}>Organization-wide HI embedding.</p>
-          <div className={styles.programFeatures}>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Leadership tracks
-            </div>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Measurement & reporting
-            </div>
-            <div className={styles.programFeature}>
-              <span className={styles.programDot} />
-              Custom curriculum
+        {/* Cohort Programs */}
+        <div className={styles.programCard}>
+          <div className={styles.programHeader}>
+            <span className={styles.programTitle}>Cohort Programs</span>
+            <span className={styles.programBadge}>4–12 weeks</span>
+          </div>
+          <div className={styles.programBody}>
+            <p className={styles.programLine}>
+              Structured progression with weekly labs.
+            </p>
+            <div className={styles.programFeatures}>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Guided learning
+              </div>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Peer practice
+              </div>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Outcome tracking
+              </div>
             </div>
           </div>
+          <div className={styles.programCTA}>
+            <button
+              className={styles.programBtnPrimary}
+              onClick={handleGetProposal}
+            >
+              Join Cohort
+            </button>
+            <button className={styles.programBtnGhost}>Syllabus</button>
+          </div>
         </div>
-        <div className={styles.programCTA}>
-          <button className={styles.programBtnPrimary}>Get Proposal</button>
-          <button className={styles.programBtnGhost}>Overview</button>
-        </div>
-      </div>
-    </div>
-  </section>
-);
 
-const WhoIsThisFor = () => (
-  <section className={`${styles.container} ${styles.section}`}>
-    <h2 className={styles.sectionTitle}>Who Is This For?</h2>
-    <div className={styles.audienceGrid}>
-      {/* Schools & Colleges */}
-      <div className={styles.audienceCard}>
-        <div className={styles.audienceHeader}>
-          <div className={styles.audienceIcon}>🎓</div>
-          <span className={styles.audienceTitle}>Schools & Colleges</span>
-        </div>
-        <div className={styles.audienceBody}>
-          <p className={styles.audienceLine}>
-            Build clarity and focus across classrooms with measurable outcomes.
-          </p>
-        </div>
-        <div className={styles.audienceCTA}>
-          <button className={styles.audienceBtnPrimary}>Get Syllabus</button>
-          <button className={styles.audienceBtnGhost}>Learn More</button>
+        {/* Annual Integrations */}
+        <div className={styles.programCard}>
+          <div className={styles.programHeader}>
+            <span className={styles.programTitle}>
+              Annual Institutional Integrations
+            </span>
+            <span className={styles.programBadge}>Year-round</span>
+          </div>
+          <div className={styles.programBody}>
+            <p className={styles.programLine}>
+              Organization-wide HI embedding.
+            </p>
+            <div className={styles.programFeatures}>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Leadership tracks
+              </div>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Measurement & reporting
+              </div>
+              <div className={styles.programFeature}>
+                <span className={styles.programDot} />
+                Custom curriculum
+              </div>
+            </div>
+          </div>
+          <div className={styles.programCTA}>
+            <button
+              className={styles.programBtnPrimary}
+              onClick={handleGetProposal}
+            >
+              Get Proposal
+            </button>
+            <button className={styles.programBtnGhost}>Overview</button>
+          </div>
         </div>
       </div>
+    </section>
+  );
+};
 
-      {/* Corporates & Institutions */}
-      <div className={styles.audienceCard}>
-        <div className={styles.audienceHeader}>
-          <div className={styles.audienceIcon}>🏢</div>
-          <span className={styles.audienceTitle}>
-            Corporates & Institutions
-          </span>
-        </div>
-        <div className={styles.audienceBody}>
-          <p className={styles.audienceLine}>
-            Embed HI culture: decision clarity, communication, and resilience.
-          </p>
-        </div>
-        <div className={styles.audienceCTA}>
-          <button className={styles.audienceBtnPrimary}>Get Proposal</button>
-          <button className={styles.audienceBtnGhost}>Overview</button>
-        </div>
-      </div>
+const WhoIsThisFor = () => {
+  const router = useRouter();
+  const handleAudienceGetProposal = () => {
+    router.push("/contact");
+  };
 
-      {/* Educators & Leaders */}
-      <div className={styles.audienceCard}>
-        <div className={styles.audienceHeader}>
-          <div className={styles.audienceIcon}>🧭</div>
-          <span className={styles.audienceTitle}>Educators & Leaders</span>
+  return (
+    <section className={`${styles.container} ${styles.section}`}>
+      <h2 className={styles.sectionTitle}>Who Is This For?</h2>
+      <div className={styles.audienceGrid}>
+        {/* Schools & Colleges */}
+        <div className={styles.audienceCard}>
+          <div className={styles.audienceHeader}>
+            <div className={styles.audienceIcon}>🎓</div>
+            <span className={styles.audienceTitle}>Schools & Colleges</span>
+          </div>
+          <div className={styles.audienceBody}>
+            <p className={styles.audienceLine}>
+              Build clarity and focus across classrooms with measurable
+              outcomes.
+            </p>
+          </div>
+          <div className={styles.audienceCTA}>
+            <button className={styles.audienceBtnPrimary } onClick={handleAudienceGetProposal}>Get Syllabus</button>
+          </div>
         </div>
-        <div className={styles.audienceBody}>
-          <p className={styles.audienceLine}>
-            Train ethical, confident leadership habits with Human intelligence
-            Labs routines.
-          </p>
-        </div>
-        <div className={styles.audienceCTA}>
-          <button className={styles.audienceBtnPrimary}>Start Track</button>
-          <button className={styles.audienceBtnGhost}>Details</button>
-        </div>
-      </div>
 
-      {/* Students & Professionals */}
-      <div className={styles.audienceCard}>
-        <div className={styles.audienceHeader}>
-          <div className={styles.audienceIcon}>💼</div>
-          <span className={styles.audienceTitle}>Students & Professionals</span>
+        {/* Corporates & Institutions */}
+        <div className={styles.audienceCard}>
+          <div className={styles.audienceHeader}>
+            <div className={styles.audienceIcon}>🏢</div>
+            <span className={styles.audienceTitle}>
+              Corporates & Institutions
+            </span>
+          </div>
+          <div className={styles.audienceBody}>
+            <p className={styles.audienceLine}>
+              Embed HI culture: decision clarity, communication, and resilience.
+            </p>
+          </div>
+          <div className={styles.audienceCTA}>
+            <button
+              className={styles.audienceBtnPrimary}
+              onClick={handleAudienceGetProposal}
+            >
+              Get Proposal
+            </button>
+            <button className={styles.audienceBtnGhost}>Overview</button>
+          </div>
         </div>
-        <div className={styles.audienceBody}>
-          <p className={styles.audienceLine}>
-            Daily HI exercises to improve focus, clarity, and original thinking.
-          </p>
+
+        {/* Educators & Leaders */}
+        <div className={styles.audienceCard}>
+          <div className={styles.audienceHeader}>
+            <div className={styles.audienceIcon}>🧭</div>
+            <span className={styles.audienceTitle}>Educators & Leaders</span>
+          </div>
+          <div className={styles.audienceBody}>
+            <p className={styles.audienceLine}>
+              Train ethical, confident leadership habits with Human intelligence
+              Labs routines.
+            </p>
+          </div>
+          <div className={styles.audienceCTA}>
+            <button className={styles.audienceBtnPrimary} onClick={handleAudienceGetProposal}>Start Track</button>
+            <button className={styles.audienceBtnGhost}>Details</button>
+          </div>
         </div>
-        <div className={styles.audienceCTA}>
-          <button className={styles.audienceBtnPrimary}>Join Cohort</button>
-          <button className={styles.audienceBtnGhost}>Programs</button>
+
+        {/* Students & Professionals */}
+        <div className={styles.audienceCard}>
+          <div className={styles.audienceHeader}>
+            <div className={styles.audienceIcon}>💼</div>
+            <span className={styles.audienceTitle}>
+              Students & Professionals
+            </span>
+          </div>
+          <div className={styles.audienceBody}>
+            <p className={styles.audienceLine}>
+              Daily HI exercises to improve focus, clarity, and original
+              thinking.
+            </p>
+          </div>
+          <div className={styles.audienceCTA}>
+            <button className={styles.audienceBtnPrimary} onClick={handleAudienceGetProposal}>Join Cohort</button>
+            <button className={styles.audienceBtnGhost}>Programs</button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const MeasurableOutcomes = () => (
   <section className={`${styles.container} ${styles.section}`}>
@@ -455,97 +493,6 @@ const MeasurableOutcomes = () => (
         </div>
         <div className={styles.outcomeFooter}>
           Post-program knowledge retention rate
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-const Pricing = () => (
-  <section className={`${styles.container} ${styles.section}`}>
-    <h2 className={styles.sectionTitle}>Pricing</h2>
-    <div className={styles.pricingGrid}>
-      {/* Workshops */}
-      <div className={styles.pricingCardDark}>
-        <div className={styles.pricingHeader}>
-          <span className={styles.pricingTitle}>Workshops</span>
-          <span className={styles.pricingBadge}>Starter</span>
-        </div>
-        <div className={styles.pricingPrice}>₹2,000–₹5,000</div>
-        <div className={styles.pricingSub}>Per participant · 1–2 days</div>
-        <div className={styles.pricingFeatures}>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Interactive sessions
-          </div>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Baseline neuro metrics
-          </div>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Post-workshop insights
-          </div>
-        </div>
-        <div className={styles.pricingCTA}>
-          <button className={styles.pricingBtnPrimary}>Book Now</button>
-          <button className={styles.pricingBtnGhost}>Details</button>
-        </div>
-      </div>
-
-      {/* Institutional Integration */}
-      <div className={`${styles.pricingCardDark} ${styles.pricingPopular}`}>
-        <div className={styles.pricingHeader}>
-          <span className={styles.pricingTitle}>Institutional Integration</span>
-          <span className={styles.pricingBadge}>Popular</span>
-        </div>
-        <div className={styles.pricingPrice}>Custom Quote</div>
-        <div className={styles.pricingSub}>Annual program · Org-wide</div>
-        <div className={styles.pricingFeatures}>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Full Human intelligence Labs Suite
-          </div>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Leadership & cohort tracks
-          </div>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Measurement & reporting
-          </div>
-        </div>
-        <div className={styles.pricingCTA}>
-          <button className={styles.pricingBtnPrimary}>Request Proposal</button>
-          <button className={styles.pricingBtnGhost}>Talk to Us</button>
-        </div>
-      </div>
-
-      {/* NeuroLens Licensing */}
-      <div className={styles.pricingCardDark}>
-        <div className={styles.pricingHeader}>
-          <span className={styles.pricingTitle}>NeuroLens Licensing</span>
-          <span className={styles.pricingBadge}>Per User</span>
-        </div>
-        <div className={styles.pricingPrice}>₹1,200 / year</div>
-        <div className={styles.pricingSub}>Per user · Annual license</div>
-        <div className={styles.pricingFeatures}>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Real-time focus metrics
-          </div>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Stress & clarity tracking
-          </div>
-          <div className={styles.pricingFeature}>
-            <span className={styles.pricingDot} />
-            Personalized HI exercises
-          </div>
-        </div>
-        <div className={styles.pricingCTA}>
-          <button className={styles.pricingBtnPrimary}>Get License</button>
-          <button className={styles.pricingBtnGhost}>Learn More</button>
         </div>
       </div>
     </div>
@@ -609,12 +556,6 @@ const ExplorePrograms = () => (
             >
               Explore
             </a>
-            <a
-              href="/hi-labs"
-              className="text-violet-700 hover:text-violet-500"
-            >
-              Learn More
-            </a>
           </div>
         </div>
       </div>
@@ -662,12 +603,6 @@ const ExplorePrograms = () => (
               className="text-violet-700 hover:text-violet-500"
             >
               Explore
-            </a>
-            <a
-              href="/hi-courses"
-              className="text-violet-700 hover:text-violet-500"
-            >
-              Learn More
             </a>
           </div>
         </div>
@@ -720,12 +655,6 @@ const ExplorePrograms = () => (
             >
               Explore
             </a>
-            <a
-              href="/hi-workshops"
-              className="text-violet-700 hover:text-violet-500"
-            >
-              Learn More
-            </a>
           </div>
         </div>
       </div>
@@ -742,7 +671,7 @@ const ExplorePrograms = () => (
         </div>
         <div className="p-6">
           <div className="flex items-center gap-2 mb-3">
-            <Image src="/gem.png" alt="events icon" width={22} height={22} />
+            <Image src="/file.svg" alt="events icon" width={22} height={22} />
             <span className="font-semibold text-[#111827]">
               Human intelligence Events
             </span>
@@ -773,12 +702,6 @@ const ExplorePrograms = () => (
             >
               Explore
             </a>
-            <a
-              href="/hi-events"
-              className="text-violet-700 hover:text-violet-500"
-            >
-              Learn More
-            </a>
           </div>
         </div>
       </div>
@@ -798,7 +721,6 @@ export default function ProductPage() {
       <ProgramFormats />
       <WhoIsThisFor />
       <MeasurableOutcomes />
-      <Pricing />
       <Footer />
     </main>
   );

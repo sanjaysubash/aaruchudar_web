@@ -119,7 +119,7 @@ export default function ResearchPage() {
                 <p className="mt-2 text-gray-700">{pro.desc}</p>
                 <ul className="mt-4 ">
                   {pro.labs.map((t) => (
-                    <li key={t} className="px-2 py-1 text-xs text-orange-600">
+                    <li key={t} className="px-2 py-1 text-xs text-black-600">
                       {t}
                     </li>
                   ))}
@@ -233,7 +233,7 @@ export default function ResearchPage() {
                 </h3>
                 <ul className="mt-4 ">
                   {pro.what_we_offer.map((t) => (
-                    <li key={t} className="px-2 py-1 text-xs text-orange-600">
+                    <li key={t} className="px-2 py-1 text-xs text-black-600">
                       {t}
                     </li>
                   ))}
@@ -244,7 +244,7 @@ export default function ResearchPage() {
                 </h4>
                 <ul className="mt-2 ">
                   {pro.impact.map((i) => (
-                    <li key={i} className="px-2 py-1 text-xs text-orange-600">
+                    <li key={i} className="px-2 py-1 text-xs text-black-600">
                       {i}
                     </li>
                   ))}

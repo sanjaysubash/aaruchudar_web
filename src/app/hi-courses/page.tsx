@@ -16,7 +16,6 @@ const programs = [
     ],
     duration: '8 weeks',
     level: 'Intermediate',
-    price: '$299',
     category: 'Mindset',
     rating: 4.8,
   },
@@ -30,7 +29,6 @@ const programs = [
     ],
     duration: '6 weeks',
     level: 'Beginner',
-    price: '$199',
     category: 'Decisions',
     rating: 4.7,
   },
@@ -44,7 +42,6 @@ const programs = [
     ],
     duration: '10 weeks',
     level: 'Advanced',
-    price: '$399',
     category: 'Focus',
     rating: 4.9,
   },
@@ -58,7 +55,6 @@ const programs = [
     ],
     duration: '6 weeks',
     level: 'Beginner',
-    price: '$249',
     category: 'Communication',
     rating: 4.6,
   },
@@ -72,7 +68,6 @@ const programs = [
     ],
     duration: '8 weeks',
     level: 'Intermediate',
-    price: '$349',
     category: 'Communication',
     rating: 4.7,
   },
@@ -86,7 +81,6 @@ const programs = [
     ],
     duration: '10 weeks',
     level: 'Advanced',
-    price: '$399',
     category: 'Thinking',
     rating: 4.8,
   },
@@ -101,7 +95,6 @@ const programs = [
     ],
     duration: '12 weeks',
     level: 'Expert',
-    price: '$2999',
     category: 'Thinking',
     rating: 5.0,
   }
@@ -244,20 +237,10 @@ const HICoursesPage = () => {
               {/* price & CTA */}
               <div className="mt-auto">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-white text-lg font-bold" aria-label="Price">{program.price}</div>
                   <span className="text-xs text-gray-400">Includes resources & support</span>
                 </div>
 
                 <div className="flex gap-3">
-                  <Link
-                    href={{ pathname: '/productpage', query: { course: program.title } }}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-md border border-purple-500/40 text-purple-300 hover:bg-purple-600 hover:text-white transition font-medium"
-                    aria-label={`Learn more about ${program.title}`}
-                  >
-                    Learn More
-                    <ArrowRight size={16} />
-                  </Link>
-
                   <Link
                     href={{ pathname: '/hi-labs' }}
                     className="px-4 py-3 rounded-md border border-white/10 text-gray-200 hover:bg-white/10 transition"

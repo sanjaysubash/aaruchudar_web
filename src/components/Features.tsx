@@ -29,9 +29,6 @@ const ProgramCard = ({ data }: { data: any }) => (
           Explore
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3"><path d="M13.94 5.94a.75.75 0 0 1 1.06 0l5 5a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 1 1-1.06-1.06l3.72-3.72H5.75a.75.75 0 0 1 0-1.5h11.91l-3.72-3.72a.75.75 0 0 1 0-1.06Z"/></svg>
         </Link>
-        <Link href={data.learnMoreHref ?? data.href} className="inline-flex items-center px-2.5 py-1.5 rounded-full border border-purple-300 bg-white text-purple-700 text-[11px] font-semibold shadow-sm hover:bg-purple-50">
-          Learn More
-        </Link>
       </div>
     </div>
   </div>
@@ -83,13 +80,12 @@ const programCards = [
       "Expert facilitator guidance",
     ],
     href: "/hi-workshops",
-    learnMoreHref: "/hi-workshops/psychological",
   },
   {
     id: 4,
     title: "Human intelligence Events",
     image: "/images/hi-events-banner.jpg",
-    icon: "/gem.png",
+    icon: "/file.svg",
     description:
       "Engaging and interactive forums that bring together innovators, leaders, and creators to network purposefully and grow together.",
     points: [
@@ -103,7 +99,7 @@ const programCards = [
   {
     id: 5,
     title: "Aaruchudar Neuro-Tech Suite",
-    image: "/images/hi-labs-banner.jpg",
+    image: "/images/neuro_tech_suite.jpg",
     icon: "/globe.svg",
     description:
       "A single system that measures, trains, and improves your mind every day.",
@@ -114,12 +110,11 @@ const programCards = [
       "Actionable insights",
     ],
     href: "/productpage", // Explore Suite
-    learnMoreHref: "/about", // Learn More
   },
   {
     id: 6,
     title: "Neuro Band & Neuro Lens",
-    image: "/images/hi-workshops-banner.jpg",
+    image: "/images/neurolens_and_band.jpg",
     icon: "/file.svg",
     description:
       "Track focus, stress, clarity, and decision patterns in real time — like a fitness tracker, but for your brain.",
@@ -130,7 +125,6 @@ const programCards = [
       "Companion app integration",
     ],
     href: "/hi-workshops", // View Devices
-    learnMoreHref: "/privacy", // Specs
   },
 ];
 

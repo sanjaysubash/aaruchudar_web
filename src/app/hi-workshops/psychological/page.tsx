@@ -11,7 +11,6 @@ export default function PsychologicalWorkshop() {
     duration: '2 days',
     level: 'Intermediate',
     rating: 4.8,
-    price: '$199',
     modules: [
       'Neural Detox Protocol – stress release + cognitive restructuring',
       'Emotional Intelligence Engine – processing algorithms',
@@ -60,7 +59,6 @@ export default function PsychologicalWorkshop() {
             </ul>
 
             <div className="flex items-center justify-between mt-4">
-              <div style={{ color: 'var(--text-primary)', fontWeight: 700 }}>{details.price}</div>
               <div className={styles.cardActions}>
                 <Link href={{ pathname: '/productpage', query: { workshop: title } }} className={styles.ctaSecondary} aria-label="Learn more">
                   Learn More

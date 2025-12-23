@@ -31,7 +31,6 @@ const WORKSHOPS: Workshop[] = [
     duration: '2 days',
     level: 'Intermediate',
     rating: 4.8,
-    price: '$199'
   },
   {
     type: 'intellectual',
@@ -46,7 +45,6 @@ const WORKSHOPS: Workshop[] = [
     duration: '1 day',
     level: 'Beginner',
     rating: 4.7,
-    price: '$149'
   },
   {
     type: 'innovative',
@@ -61,7 +59,6 @@ const WORKSHOPS: Workshop[] = [
     duration: '2 days',
     level: 'Advanced',
     rating: 4.9,
-    price: '$249'
   }
 ];
 
@@ -213,19 +210,18 @@ export default function HIWorkshopsPage() {
               {/* price & CTA */}
               <div className="mt-auto">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-white text-lg font-bold" aria-label="Price">{w.price}</div>
                   <span className="text-xs text-gray-400">Includes materials & support</span>
                 </div>
 
                 <div className="flex gap-3">
-                  <Link
+                  {/* <Link
                     href={{ pathname: '/productpage', query: { workshop: w.title } }}
                     className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-md border border-purple-500/40 text-purple-300 hover:bg-purple-600 hover:text-white transition font-medium"
                     aria-label={`Learn more about ${w.title}`}
                   >
                     Learn More
                     <ArrowRight size={16} />
-                  </Link>
+                  </Link> */}
 
                   <Link
                     href={`/hi-workshops/${w.type}`}
