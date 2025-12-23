@@ -93,8 +93,16 @@ function QuizPage(): JSX.Element {
   const [quizData, setQuizData] = useState<QuizData | null>(null);
   const [stage, setStage] = useState<"welcome" | "quiz" | "results" | "review">("welcome");
   const [loading, setLoading] = useState(true);
-  // theme toggle
-  const [theme, setTheme] = useState<"emerald" | "orange">(() => (typeof window !== "undefined" && localStorage.getItem("quiz_theme") === "orange" ? "orange" : "emerald"));
+  // theme toggle: default to emerald on first render (SSR-safe), hydrate from localStorage after mount
+  const [theme, setTheme] = useState<"emerald" | "orange">("emerald");
+
+  // After mount, read stored theme to avoid hydration mismatches
+  useEffect(() => {
+    try {
+      const stored = typeof window !== "undefined" ? localStorage.getItem("quiz_theme") : null;
+      if (stored === "orange" || stored === "emerald") setTheme(stored);
+    } catch {}
+  }, []);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
