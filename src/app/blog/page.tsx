@@ -212,38 +212,6 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
-
-        {/* Newsletter */}
-        <section className="newsletter px-6">
-          <div className="container">
-            {/* Card wrapper inside container for professional layout */}
-            <div className="text-center">
-              <div className="newsletter-title">Stay Ahead of the Curve</div>
-              <p className="newsletter-subtitle">
-                Join thousands of innovators who rely on our insights to stay informed about the latest trends.
-              </p>
-
-              {/* Form and features column */}
-              <div className="newsletter-form grid">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="newsletter-input"
-                  aria-label="Email address"
-                />
-                <button className="newsletter-btn" aria-label="Subscribe to newsletter">
-                  Subscribe Now
-                </button>
-              </div>
-
-              <div className="newsletter-features">
-                <span>No spam, ever</span>
-                <span>Weekly insights</span>
-                <span>Unsubscribe anytime</span>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );
