@@ -89,6 +89,8 @@ const THEME_CLASS_MAP = {
 
 /* ------------------------------- Main Page -------------------------------- */
 
+const QUIZ_STATE_VERSION = 2;
+
 function QuizPage(): JSX.Element {
   const [quizData, setQuizData] = useState<QuizData | null>(null);
   const [stage, setStage] = useState<"welcome" | "quiz" | "results" | "review">("welcome");
@@ -123,8 +125,17 @@ function QuizPage(): JSX.Element {
   // restore session
   useEffect(() => {
     try {
-      const saved = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("quiz_state") || "null") : null;
-      if (saved?.quizData) {
+      const raw = typeof window !== "undefined" ? localStorage.getItem("quiz_state") : null;
+      const saved = raw ? JSON.parse(raw) : null;
+
+      const isValid = Boolean(
+        saved &&
+        saved.version === QUIZ_STATE_VERSION &&
+        Array.isArray(saved?.quizData?.quiz?.questions) &&
+        saved.quizData.quiz.questions.length > 0
+      );
+
+      if (isValid) {
         setQuizData(saved.quizData);
         setSelectedAnswers(saved.selectedAnswers);
         setCurrentQuestion(saved.currentQuestion);
@@ -134,17 +145,22 @@ function QuizPage(): JSX.Element {
         setPaused(false);
         setHiddenOptions(saved.hiddenOptions || {});
         setLifelines(saved.lifelines || { fifty: 1, skip: 1 });
-        return;
+        return; // valid restore, skip fresh load
       }
-    } catch {}
-    // load fresh
+
+      // invalid or outdated cache: remove and load fresh
+      if (typeof window !== "undefined") localStorage.removeItem("quiz_state");
+    } catch {
+      try { if (typeof window !== "undefined") localStorage.removeItem("quiz_state"); } catch {}
+    }
+
     loadQuiz();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // persist session
   useEffect(() => {
-    const payload = { quizData, selectedAnswers, currentQuestion, score, stage, timeLeft, hiddenOptions, lifelines };
+    const payload = { quizData, selectedAnswers, currentQuestion, score, stage, timeLeft, hiddenOptions, lifelines, version: QUIZ_STATE_VERSION };
     try { if (typeof window !== "undefined") localStorage.setItem("quiz_state", JSON.stringify(payload)); } catch {}
   }, [quizData, selectedAnswers, currentQuestion, score, stage, timeLeft, hiddenOptions, lifelines]);
 
