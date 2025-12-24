@@ -140,6 +140,13 @@ export default function Landing() {
               >
                 Explore insights
               </Link>
+              <Link
+  href="/scholarship-application"
+  className="rounded-xl bg-indigo-600 text-white px-6 py-3 shadow-lg hover:bg-indigo-500 transition"
+>
+  🎓 Apply for Scholarship
+</Link>
+
             </div>
           </div>
         </div>
