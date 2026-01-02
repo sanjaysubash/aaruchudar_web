@@ -14,17 +14,19 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname();
   const isQuizPage = pathname === "/quiz";
+  const isFranchisePage = pathname?.startsWith("/franchise1");
 
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <link rel="icon" href="/logo2.png" type="image/png" />
       </head>
       <body
         className={`antialiased`}
         suppressHydrationWarning
       >
-        {!isQuizPage && <Navbar />}
+        {!isQuizPage && !isFranchisePage && <Navbar />}
         <main className={`${!isQuizPage ? '' : ''} min-h-screen safe-bottom pb-16 md:pb-0`} aria-label="Page content">
           {children}
         </main>
